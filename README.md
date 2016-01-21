@@ -1,17 +1,17 @@
-# htdvisser/taiga-front-dist
+# kalumkalac/taiga-front-dist
 
 [Taiga](https://taiga.io/) is a project management platform for startups and agile developers & designers who want a simple, beautiful tool that makes work truly enjoyable.
 
-This Docker image can be used for running the Taiga frontend. It works together with the [htdvisser/taiga-back](https://registry.hub.docker.com/u/kalumkalac/taiga-back/) image.
+This Docker image can be used for running the Taiga frontend. It works together with the [kalumkalac/taiga-back](https://registry.hub.docker.com/u/kalumkalac/taiga-back/) image.
 
 This image is based on the work of [htdvisser](https://github.com/htdvisser/taiga-docker)
 
 ## Running
 
-A [kalumkalac/taiga-back](https://registry.hub.docker.com/u/htdvisser/taiga-back/) container should be linked to the taiga-front-dist container. Also connect the volumes of this the taiga-back container if you want to serve the static files for the admin panel.
+A [kalumkalac/taiga-back](https://registry.hub.docker.com/u/kalumkalac/taiga-back/) container should be linked to the taiga-front-dist container. Also connect the volumes of this the taiga-back container if you want to serve the static files for the admin panel.
 
 ```
-docker run --name taiga_front_dist_container_name --link taiga_back_container_name:taigaback --volumes-from taiga_back_container_name htdvisser/taiga-front-dist
+docker run --name taiga_front_dist_container_name --link taiga_back_container_name:taigaback --volumes-from taiga_back_container_name kalumkalac/taiga-front-dist
 ```
 
 ## Docker-compose
