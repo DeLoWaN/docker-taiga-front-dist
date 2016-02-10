@@ -113,3 +113,21 @@ taigafront:
   * ``/etc/nginx/ssl/`` volume attached with ``ssl.crt`` and ``ssl.key`` files
 * ``SSL_CRT`` SSL certificate value. Valid only when ``SCHEME`` set to https.
 * ``SSL_KEY`` SSL certificate key. Valid only when ``SCHEME`` set to https.
+
+## Backup Taiga
+
+See [taigaback README](https://github.com/kalumkalac/docker-taiga-back#backup-taiga).
+
+## Restore Taiga
+
+See [taigaback README](https://github.com/kalumkalac/docker-taiga-back#restore-taiga).
+
+## Upgrade Taiga
+
+See [taigaback README](https://github.com/kalumkalac/docker-taiga-back#upgrade-taiga).
+
+Proceed to the upgrade steps on front container using docker exec:
+
+```
+docker exec -ti taiga_front_container bash
+```
