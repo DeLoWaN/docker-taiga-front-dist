@@ -131,3 +131,11 @@ Proceed to the upgrade steps on front container using docker exec:
 ```
 docker exec -ti taiga_front_container bash
 ```
+
+YOU DO NOT NEED TO APPLY THESES STEPS SINCE IT'S ALREADY DONE BY THE BUILDING OF THE IMAGE:
+
+```
+cd ~/taiga-front-dist
+git checkout stable
+git pull
+```
