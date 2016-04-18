@@ -3,7 +3,7 @@ FROM nginx:1.7
 MAINTAINER Damien Gustave <delovan@gmail.com>
 
 # Install Git
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y git && apt-get install -y subversion && rm -rf /var/lib/apt/lists/*
 
 # NginX Configuration
 ADD nginx.conf /etc/nginx/nginx.conf
@@ -20,7 +20,7 @@ RUN \
   mkdir -p /usr/local/taiga && \
   git clone https://github.com/taigaio/taiga-front-dist.git /usr/local/taiga/taiga-front-dist && \
   cd /usr/local/taiga/taiga-front-dist && \
-  git checkout 1.9.1-stable
+  git checkout 2.0.0-stable
 
 # Configuration and Start scripts
 ADD ./configure /usr/local/taiga/configure

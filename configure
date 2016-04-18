@@ -31,7 +31,14 @@ cat > /usr/local/taiga/taiga-front-dist/dist/conf.json <<EOL
   "termsOfServiceUrl": null,
   "maxUploadFileSize": null,
   "gitHubClientId": null,
-  "contribPlugins": [ ]
+  "contribPlugins": [
+    "/plugins/slack/slack.json"
+  ]
 }
 
 EOL
+
+# Slack plugin
+mkdir -p /usr/local/taiga/taiga-front-dist/dist/plugins
+cd /usr/local/taiga/taiga-front-dist/dist/plugins
+svn export "https://github.com/taigaio/taiga-contrib-slack/tags/2.0/front/dist" "slack"
